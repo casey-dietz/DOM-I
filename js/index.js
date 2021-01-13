@@ -51,8 +51,25 @@ navHeader[3].textContent = 'Features'
 navHeader[4].textContent = 'About'
 navHeader[5].textContent = 'Contact'
 
+navHeader.forEach(element => element.style.color = 'green')
+
+let headerElement = document.querySelector('nav')
+let createHeadline = document.createElement('a')
+
+createHeadline.textContent = 'Home'
+createHeadline.style.color = 'green'
+createHeadline.style.fontSize = '1rem';
+
+let anotherHeadline = document.createElement('a')
+anotherHeadline.textContent = "Another"
+anotherHeadline.style.color = 'green'
+anotherHeadline.style.fontSize = '1rem'
+
+headerElement.prepend(createHeadline)
+headerElement.appendChild(anotherHeadline)
+
 let ctaTextHeader = document.querySelector('.cta-text h1')
-console.log(ctaTextHeader)
+// console.log(ctaTextHeader)
 ctaTextHeader.textContent = 'DOM Is AWESOME'
 
 let ctaButton = document.querySelector('.cta-text button')
@@ -62,7 +79,7 @@ let ctaImg = document.querySelector('#cta-img')
 ctaImg.src = 'img/header-img.png'
 
 let featuresHeader = document.querySelectorAll('.top-content h4')
-console.log(featuresHeader)
+// console.log(featuresHeader)
 featuresHeader[0].textContent = 'Features'
 featuresHeader[1].textContent = 'About'
 
@@ -94,3 +111,4 @@ sectionContactParagraph[2].textContent = 'sales@greatidea.io'
 
 let footerSection = document.querySelector('footer p')
 footerSection.textContent = 'Copyright Great Idea! 2018'
+
